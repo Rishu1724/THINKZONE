@@ -1,0 +1,130 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #333; /* Dark gray for better readability */
+    font-size: 50px;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Post Styling */
+.post {
+    background-color: #7fffd4; /* Soft aquamarine */
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 20px auto; /* Centered with space between posts */
+    border-radius: 10px; /* Smoother rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for elevation */
+    max-width: 600px; /* Set a maximum width for better layout */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation */
+.post:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Username Styling */
+.user {
+    font-style: italic;
+    font-weight: bold;
+    color: #555; /* Softer gray */
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    animation: slideInLeft 1s ease;
+}
+
+/* Content Styling */
+.cont {
+    background-color: #8b4513; /* Rich brown for contrast */
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.1em;
+    animation: bounceIn 1.5s ease;
+}
+
+/* Button Styling */
+button {
+    background-color: #333; /* Dark background */
+    color: #fff; /* Light text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #555; /* Slightly lighter on hover */
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .post {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .cont {
+        font-size: 1em;
+    }
+}
